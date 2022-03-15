@@ -1,16 +1,17 @@
 import 'fperson.dart';
 import 'mahasiswa.dart';
-import 'status.dart';
 
 class DosenLB extends Person {
   int tGajisks = 0;
+  int Gajidsr = 0;
 
-  DosenLB(String? nama, int sks, int tGajisks, int Gajidsr) : super(nama, sks){
+  DosenLB(String? nama, double sks, int tGajisks, int Gajidsr) : super(nama, sks){
     this.tGajisks = tGajisks;
+    this.Gajidsr = Gajidsr;
   }
 
   get Gaji {
-    return (sks * tGajisks);
+    return (sks * tGajisks + Gajidsr);
   }  
 
   get Hsks {
@@ -23,7 +24,7 @@ class DosenTetap extends Person {
   int Gajidsr = 0;
   int tunjHadir = 0;
 
-  DosenTetap(String? nama, int sks, int tGajisks, int tunjHadir, int Gajidsr) : super(nama, sks){
+  DosenTetap(String? nama, double sks, int tGajisks, int tunjHadir, int Gajidsr) : super(nama, sks){
     this.tGajisks = tGajisks;
     this.tunjHadir = tunjHadir;
     this.Gajidsr = Gajidsr;
@@ -42,7 +43,7 @@ class DosenTamu extends Person {
   int tGajisks = 0;
   int tunjHadir = 0;
 
-  DosenTamu(String? nama, int sks) : super(nama, sks) {
+  DosenTamu(String? nama, double sks, int tGajisks, int tunjHadir) : super(nama, sks) {
     this.tGajisks = tGajisks;
     this.tunjHadir = tunjHadir;
   }

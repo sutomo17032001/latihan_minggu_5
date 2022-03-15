@@ -1,18 +1,28 @@
-import 'fperson.dart';
+import 'dart:convert';
 
-class Staff extends Person {
+import 'pegawaistaff.dart';
+
+class Staff extends Pegawai {
   int jCuti = 12;
   int StunjHadir = 0;
-  int Tgaji = 0;
+  int Gajidsr = 0;
 
-  Staff(String? nama, int sks, int jCuti, int StunjHadir, int Tgaji) : super(nama, sks){
+  Staff(String? nama, int StunjHadir, int Gajidsr) : super(nama){
     this.jCuti = jCuti;
     this.StunjHadir = StunjHadir;
-    this.Tgaji = Tgaji;
+    this.Gajidsr = Gajidsr;
   }
 
-  get hTgaji {
-    return (Tgaji + StunjHadir);
+  get Tgaji {
+    return (Gajidsr + StunjHadir);
+  }
+
+  void kurangjatahcuti() {
+    jCuti = jCuti - 1;
+  }
+
+  int get jatahcuti {
+    return jCuti;
   }
 
 }

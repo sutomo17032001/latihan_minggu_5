@@ -1,6 +1,6 @@
 class Person {
   String? _nama;
-  int _sks = 0;
+  double _sks = 0.0;
 
   Person(this._nama, this._sks);
 
@@ -8,12 +8,12 @@ class Person {
     _nama = dtNama;
   }
 
-  set sks(int dtSks) {
+  set sks(double dtSks) {
     _sks = dtSks;
   }
 
   String get nama => this._nama!;
-  int get sks => this._sks;
+  double get sks => this._sks;
 }
 
 
